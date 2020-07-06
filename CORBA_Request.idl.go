@@ -2,58 +2,9 @@
 
 package goIdlCorba
 
-import __omg__ "github.com/bhbosman/orb/src/omg"
-
 // Native declaration: "CORBA::OpaqueValue", generatedBy by: "WriteNativeDcl"
 type CorbaOpaqueValue NativeCorbaOpaqueValue
 
-// Interface declaration: "CORBA::Request", generatedBy by: "WriteInterface"
-type CorbaRequest interface {
-	// Interface operations
-	// Original name: "add_arg"
-	AddArg(Name CorbaIdentifier, ArgType CorbaTypeCode, Value CorbaOpaqueValue, Len int32, ArgFlags uint32) (error error)
-	// Original name: "invoke"
-	Invoke(InvokeFlags uint32) (error error)
-	// Original name: "delete"
-	Delete() (error error)
-	// Original name: "send"
-	Send(InvokeFlags uint32) (error error)
-	//Exceptions for : GetResponse
-	//	CorbaWrongTransaction
-	// Original name: "get_response"
-	GetResponse() (error error)
-	// Original name: "poll_response"
-	PollResponse() (result bool, err error)
-	// Original name: "sendp"
-	Sendp() (result *IdlObject, err error)
-	// Original name: "prepare"
-	Prepare(P *IdlObject) (error error)
-	// Original name: "sendc"
-	Sendc(Handler *IdlObject) (error error)
-}
-
-//noinspection GoSnakeCaseUsage
-type CorbaRequest_Helper struct {
-}
-
-//noinspection GoSnakeCaseUsage
-const CorbaRequestId_Const = "IDL:omg.org/CORBA/Request:1.0"
-
-func (self CorbaRequest_Helper) Id() string {
-	return CorbaRequestId_Const
-}
-
-func (self CorbaRequest_Helper) Read(stream IReadAny) (CorbaRequest, error) {
-	return nil, nil
-}
-
-func (self CorbaRequest_Helper) Write(stream IWriteAny, v CorbaRequest) error {
-	return nil
-}
-
-
-//noinspection GoUnusedGlobalVariable
-var CorbaRequestHelper = CorbaRequest_Helper{}
 
 func init() {
 }
